@@ -39,7 +39,6 @@
             }
 
             sampler2D _MainTex;
-            uniform float4 _MainTex_TexelSize;
             const float _Radius;
 
             fixed4 frag (v2f IN) : SV_Target
