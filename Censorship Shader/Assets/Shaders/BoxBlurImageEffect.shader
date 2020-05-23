@@ -1,9 +1,9 @@
-﻿Shader "Custom/BoxBlur"
+﻿Shader "Custom/BoxBlurImageEffect"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _Radius ("Radius", Float) = 20.0
+        _Radius ("Radius", Range(0, 100)) = 20
     }
     SubShader
     {
@@ -39,21 +39,28 @@
             }
 
             sampler2D _MainTex;
+            uniform float4 _MainTex_TexelSize;
             const float _Radius;
 
-            fixed4 frag (v2f i) : SV_Target
+            fixed4 frag (v2f IN) : SV_Target
             {
-                // fixed4 col = tex2D(_MainTex, i.uv);
-                float2 uv = i.uv;
                 // Apply blur in x direction
-                float2 direction = float2(0.0, 1.0 / uv.x);
+                float2 direction = float2(1.0 / _ScreenParams.x, 0.0);
 
                 // Sample from image
                 float4 sampleColor = float4(0.0, 0.0, 0.0, 0.0);
                 float j = 0.0;
+                for(float i = -_Radius; i <= _Radius; i++)
+                {
+                    sampleColor += tex2D(_MainTex, IN.uv + (i * direction));
+                    j++;
+                }
+
+                // Apply blur in y direction
+                direction = float2(0.0, 1.0 / _ScreenParams.y);
                 for(float n = -_Radius; n <= _Radius; n++)
                 {
-                    sampleColor += tex2D(_MainTex, uv + (n * direction));
+                    sampleColor += tex2D(_MainTex, IN.uv + (n * direction));
                     j++;
                 }
 
