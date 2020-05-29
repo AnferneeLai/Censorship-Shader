@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 1379943717}
   - component: {fileID: 1379943716}
   - component: {fileID: 1379943715}
+  - component: {fileID: 1379943719}
   m_Layer: 0
   m_Name: Luke
   m_TagString: Untagged
@@ -536,6 +537,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!114 &1379943719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379943714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830be84fe5a2d114aaf6773d929f876c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaders:
+  - {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 4800000, guid: 432c22e3275db334fa5c931689f31419, type: 3}
+  - {fileID: 4800000, guid: b8bf7642f5af41740b44d0fede7c657f, type: 3}
+  - {fileID: 4800000, guid: b2ec6c13ccb866d4a95e995ecfb5d26c, type: 3}
 --- !u!1 &1655680655
 GameObject:
   m_ObjectHideFlags: 0
