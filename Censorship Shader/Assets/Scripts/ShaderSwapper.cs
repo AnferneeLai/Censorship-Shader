@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MaterialSwapper : MonoBehaviour
+public class ShaderSwapper : MonoBehaviour
 {
     [SerializeField]
-    private Material[] materials;
-    private int materialIndex = 0;
+    private Shader[] shaders;
+    private int shaderIndex = 0;
 
     private Renderer renderer;
     // Start is called before the first frame update
     void Start()
     {
         renderer = GetComponent<Renderer>();
-        renderer.material = materials[materialIndex];
+        renderer.material.shader = shaders[shaderIndex];
     }
 
     // Update is called once per frame
@@ -21,17 +21,17 @@ public class MaterialSwapper : MonoBehaviour
     {
         if(Input.GetKeyDown("space"))
         {
-            ChangeMaterial();
+            ChangeShader();
         }
     }
 
-    private void ChangeMaterial()
+    private void ChangeShader()
     {
-        materialIndex++;
-        if(materialIndex >= materials.Length)
+        shaderIndex++;
+        if(shaderIndex >= shaders.Length)
         {
-            materialIndex = 0;
+            shaderIndex = 0;
         }
-        renderer.material = materials[materialIndex];
+        renderer.material.shader = shaders[shaderIndex];
     }
 }
