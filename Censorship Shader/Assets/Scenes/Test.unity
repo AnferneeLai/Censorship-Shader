@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 732463847}
   - component: {fileID: 732463846}
   - component: {fileID: 732463845}
+  - component: {fileID: 732463849}
   m_Layer: 0
   m_Name: Arthur
   m_TagString: Untagged
@@ -309,6 +310,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!114 &732463849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732463844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830be84fe5a2d114aaf6773d929f876c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 4b915da18f801094d8bf11d3e7a1369d, type: 2}
+  - {fileID: 2100000, guid: 6c7b1e3d9000bbd438fb75b345a09a47, type: 2}
+  - {fileID: 2100000, guid: bec25cf6f74c3e444845743901ac00b2, type: 2}
 --- !u!1 &1356486698
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356486698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0.09, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
