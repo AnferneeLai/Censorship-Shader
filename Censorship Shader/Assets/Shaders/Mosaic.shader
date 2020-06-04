@@ -35,7 +35,7 @@
 			int _MosaicResolutionX;
 			int _MosaicResolutionY;
 
-	#define MOSAIC (_MosaicResolution * float2(_MosaicResolutionX, _MosaicResolutionY))
+			#define MOSAIC (_MosaicResolution * float2(_MosaicResolutionX, _MosaicResolutionY))
 
 			// Surface Shader
 			void surf(Input IN, inout SurfaceOutputStandard o) {
