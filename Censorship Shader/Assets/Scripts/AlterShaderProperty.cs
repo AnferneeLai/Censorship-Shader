@@ -77,4 +77,26 @@ public class AlterShaderProperty : MonoBehaviour
             r.material.SetFloat("_FlowStrength", newValue);
         }
     }
+
+    public void SetSwirlRadius(float newValue)
+    {
+        foreach (var r in rend)
+        {
+            r.material.SetFloat("_Radius", newValue);
+        }
+    }
+    public void SetSwirlOffsetX(float newValue)
+    {
+        foreach (var r in rend)
+        {
+            r.material.SetFloat("_OffsetX", newValue);
+        }
+    }
+    public void SetSwirlOffsetY(float newValue)
+    {
+        foreach (var r in rend)
+        {
+            r.material.SetFloat("_OffsetY", newValue);
+        }
+    }
 }

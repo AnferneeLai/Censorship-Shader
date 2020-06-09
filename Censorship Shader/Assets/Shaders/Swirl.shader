@@ -9,6 +9,9 @@ Shader "Swirl" {
 		_MainTex("Albedo (RGB)", 2D) = "white" {}
 		_Glossiness("Smoothness", Range(0,1)) = 0.5
 		_Metallic("Metallic", Range(0,1)) = 0.0
+		_Radius("Radius", Range(0,2500)) = 1000
+		_OffsetX("OffsetX", Range(-1000,1000)) = 0
+		_OffsetY("OffsetY", Range(-1000,1000)) = 0
 	}
 		SubShader{
 			Tags { "RenderType" = "Opaque" }
@@ -39,13 +42,13 @@ Shader "Swirl" {
 			UNITY_INSTANCING_BUFFER_END(Props)
 
 				// possibly add interactivity
-				//uniform float radius
-				//uniform float angle
-				//uniform float2 center
+				float _Radius, _OffsetX, _OffsetY;
+				//uniform float angle;
+				//uniform float2 center;
 
 				fixed4 Swirl(sampler2D tex, inout float2 uv, float time) {
-					float radius = _ScreenParams.x;
-					float2 center = float2(_ScreenParams.x, _ScreenParams.y);
+					float radius = _Radius;
+					float2 center = float2(_ScreenParams.x + _OffsetX, _ScreenParams.y + _OffsetY);
 					float2 texSize = float2(_ScreenParams.x / 0.5, _ScreenParams.y / 0.5);
 					float2 tc = uv * texSize;
 					tc -= center;

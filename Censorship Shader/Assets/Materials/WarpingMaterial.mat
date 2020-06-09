@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WarpingMaterial
-  m_Shader: {fileID: 4800000, guid: b2ec6c13ccb866d4a95e995ecfb5d26c, type: 3}
+  m_Shader: {fileID: 4800000, guid: b85b666b74d2dc240b8be52b46c4202a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -77,9 +77,11 @@ Material:
     - _MosaicResolutionX: 1
     - _MosaicResolutionY: 1
     - _OcclusionStrength: 1
+    - _OffsetX: 0
+    - _OffsetY: 0
     - _Parallax: 0.02
     - _Power: 1
-    - _Radius: 100
+    - _Radius: 1000
     - _Refraction: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
