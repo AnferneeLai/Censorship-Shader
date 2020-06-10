@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BoxBlur
-  m_Shader: {fileID: 4800000, guid: b85b666b74d2dc240b8be52b46c4202a, type: 3}
+  m_Shader: {fileID: 4800000, guid: b8bf7642f5af41740b44d0fede7c657f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
